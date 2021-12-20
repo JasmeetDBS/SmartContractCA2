@@ -56,11 +56,10 @@ tx_dict = Greeter.constructor().buildTransaction({
 signed_txn = W3.eth.account.sign_transaction(tx_dict, private_key=privateKey)
 #diagnostics
 #print(signed_txn)
-print(privateKey)
 print("Deploying the Smart Contract")
 result = W3.eth.sendRawTransaction(signed_txn.rawTransaction)
 #diagnostics
-#print(result)
+print(result)
 #print('-----------------------------------')
 tx_receipt = None#W3.eth.getTransactionReceipt(result)
 
