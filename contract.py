@@ -54,7 +54,7 @@ tx_dict = Greeter.constructor().buildTransaction({
 })
 
 name=input("Please provide your name:")
-print("Hello" + name)
+print(concat("Hello ", name)
 
 signed_txn = W3.eth.account.sign_transaction(tx_dict, private_key=privateKey)
 #diagnostics
