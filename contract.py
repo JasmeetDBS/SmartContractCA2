@@ -48,10 +48,13 @@ nonce = W3.eth.getTransactionCount(address1)
 tx_dict = Greeter.constructor().buildTransaction({
   'chainId': 3,
   'gas': 1400000,
-  'gasPrice': w3.toWei('40', 'gwei'),
+  'gasPrice': w3.toWei('1', 'gwei'),
   'nonce': nonce,
   'from':address1
 })
+
+name=input("Please provide your name:")
+print(name)
 
 signed_txn = W3.eth.account.sign_transaction(tx_dict, private_key=privateKey)
 #diagnostics
@@ -90,7 +93,7 @@ nonce = W3.eth.getTransactionCount(address1)
 tx_dict = greeter.functions.setGreeting('Hello from the contract deployed by Jasmeet Kaur with student number 10009976').buildTransaction({
   'chainId': 3,
   'gas': 1400000,
-  'gasPrice': w3.toWei('40', 'gwei'),
+  'gasPrice': w3.toWei('1', 'gwei'),
   'nonce': nonce,
   'from':address1
 })
